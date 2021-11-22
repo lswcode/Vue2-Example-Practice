@@ -28,7 +28,7 @@ export default {
   mounted() {
     // 这个函数必须要在兄弟数据传递前调用，用来监听数据的传递，所以写在mounted中
     useBus.$on("sendData", (data) => {
-      // 第一个参数是事件名，第二个参数是一个函数，参数就是接收到的数据
+      // 第一个参数是$on绑定的事件名，第二个参数是一个函数，参数就是接收到的数据
       this.received = data;
     });
   },
