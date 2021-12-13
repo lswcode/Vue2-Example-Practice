@@ -14,6 +14,11 @@ const routes = [
     name: "Son",
     component: () => import("../views/Son.vue"),
   },
+  {
+    path: "/destory",
+    name: "Destory",
+    component: () => import("../views/Destory.vue"),
+  },
 ];
 
 const router = new VueRouter({

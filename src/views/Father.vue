@@ -12,6 +12,7 @@
       <div slot="isTwo">具名插槽内容2</div>
     </Brother>
     <!-- 写在子组件标签中的数据，会显示在子组件的slot中 -->
+    <button @click="$router.push('/destory')">点击跳转到定时器销毁测试页面</button>
   </div>
 </template>
 
