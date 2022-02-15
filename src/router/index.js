@@ -19,6 +19,11 @@ const routes = [
     name: "Destory",
     component: () => import("../views/Destory.vue"),
   },
+  {
+    path: "/test",
+    name: "Test",
+    component: () => import("../views/Test.vue"),
+  },
 ];
 
 const router = new VueRouter({

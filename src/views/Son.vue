@@ -9,6 +9,7 @@
 
 <script>
 import { useBus } from "@/utils/bus.js";
+import { myObj, myArr } from "@/export-test/test1.js";
 export default {
   name: "Son",
   components: {},
@@ -30,8 +31,15 @@ export default {
     sendDataToBro() {
       useBus.$emit("sendData", this.text); // 发送数据 第一个参数是自定义事件名，让兄弟组件监听，第二个参数是传递的数据
     },
+    logObj() {
+      console.log("这是Son.vue中的myObj:", myObj);
+      console.log("这是Son.vue中的myArr:", myArr);
+    },
   },
-  created() {},
+  created() {
+    console.log("这是Son.vue中的myObj:", myObj);
+    console.log("这是Son.vue中的myArr:", myArr);
+  },
   mounted() {},
 };
 </script>
