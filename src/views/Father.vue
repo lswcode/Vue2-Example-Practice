@@ -39,7 +39,6 @@ export default {
   methods: {
     getDataFromSon(data) {
       console.log("父组件Father中:", data);
-      console.log("子组件的num:", this.$children[0].num); // 注意父组件访问到的是一个数组，因父组件可能有多个子组件
     },
     clickFun() {
       const obj1 = {
@@ -77,7 +76,12 @@ export default {
     console.log("父组件中的myObj:", myObj);
     console.log("父组件中的myArr:", myArr);
   },
-  mounted() {},
+  mounted() {
+    console.log(
+      "使用this.$children[0].num获取子组件数据:",
+      this.$children[1].num
+    ); // 注意父组件访问到的是一个数组，因父组件可能有多个子组件，首先要确定子组件的下标
+  },
 };
 </script>
 <style lang='less' scoped>
