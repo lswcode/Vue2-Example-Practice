@@ -24,6 +24,11 @@ const routes = [
     name: "Test",
     component: () => import("../views/Test.vue"),
   },
+  {
+    path: "/language",
+    name: "Lang",
+    component: () => import("../views/Language.vue"),
+  },
 ];
 
 const router = new VueRouter({
