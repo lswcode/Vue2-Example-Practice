@@ -11,6 +11,10 @@ Vue.use(Global); // // 全局注册组件方法2，Vue.use会自动调用插件�
 // ---------------------------------------------------------------
 Vue.config.productionTip = false;
 
+window.globalVal = {
+  id: 7777,
+  uname: "小白",
+};
 new Vue({
   router,
   store,

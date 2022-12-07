@@ -15,6 +15,8 @@
     </Brother>
     <!-- 写在子组件标签中的数据，会显示在子组件的slot中 -->
     <button @click="$router.push('/destory')">点击跳转到定时器销毁测试页面</button>
+    <hr>
+    <button @click="testFun1">window全局变量测试</button>
   </div>
 </template>
 
@@ -70,6 +72,9 @@ export default {
       console.log("父组件中的myObj:", myObj);
       console.log("父组件中的myArr:", myArr);
       this.$refs.sonRef.logObj();
+    },
+    testFun1() {
+      console.log(window.globalVal);
     },
   },
   created() {
